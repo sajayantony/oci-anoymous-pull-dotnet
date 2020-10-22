@@ -1,16 +1,16 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace OCIArtifact.Samples
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             var loginUri = "x"; 
             var repo = "x";
             var tag = "x";
-            var t = ContentStore.Pull(loginUri, repo, tag);
-            t.GetAwaiter().GetResult();
+            await ContentStore.PullAsync(loginUri, repo, tag);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace OCIArtifact.Samples
 {
     public class ContentStore
     {
-        public static async Task Pull(string registry, string repo, string tag)
+        public static async Task PullAsync(string registry, string repo, string tag)
         {
             var image = new ImageRef()
             {
